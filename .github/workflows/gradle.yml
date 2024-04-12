@@ -71,8 +71,8 @@ jobs:
           port: ${{ secrets.EC2_SSH_PORT }}
           timeout: 300s
           script: |
-            sudo docker stop airbnb-backend-demo
-            sudo docker rm airbnb-backend-demo
+            sudo docker stop withboard-image
+            sudo docker rm withboard-image
             sudo docker run -it -d -p 8080:8080 --name withboard-image  ${{ secrets.DOCKERHUB_USERNAME }}/withboard-image
 
       # REMOVE Github IP FROM security group
